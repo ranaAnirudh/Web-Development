@@ -1,0 +1,93 @@
+.big{
+  background-color:yellow;
+  height :500px;
+  width:800px;
+  padding:4px 4px 4px 0;
+  position: relative;
+}
+.small{
+  position:absolute;
+  background-color:red;
+  display:inline-block;
+  height :50px;
+  width:50px;
+}
+div:nth-child(2){
+  top:4px;
+  left:200px;
+  animation-duration:4s ;
+  animation-name:upa ;
+  animation-iteration-count:infinite;
+}
+@keyframes upa{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(450px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+div:nth-child(3){
+  top:4px;
+  left:450px;
+  animation-name:upb;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+}
+@keyframes upb{
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(450px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+div:nth-child(4){
+  top:4px;
+  left:650px;
+  animation-name:upc;
+  animation-duration:3s;
+  animation-iteration-count:infinite;
+}
+@keyframes upc{
+  0%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(450px);
+  }
+  100%{
+    transform:translateY(0);
+  }
+}
+.out{
+  background-color:blue;
+  position:absolute;
+  height :50px;
+  width:50px;
+  left:0px;
+  top:240px;
+  animation-name:sidea;
+  animation-duration:7s;
+  animation-iteration-count:infinite;
+}
+@keyframes sidea{
+  0%{
+    transform:translateX(0);
+  }
+  50%{
+    transform:translateX(750px);
+  }
+  0%{
+    transform:translateX(0);
+  }
+}
+.big:active .out{
+    animation-play-state: paused;
+}
