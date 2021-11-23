@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import { Route,BrowserRouter as Router, Switch ,Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import './form.css'
-    const Login =() => {
+    const Login =({login}) => {
         const [uname, setName] = useState("");
         const [pass, setPass] = useState("");
         const [allEntry, setEntry] = useState([])
@@ -12,7 +12,8 @@ import './form.css'
             e.preventDefault();
             const newEntry = {uname:uname,pass:pass};
             setEntry([...allEntry,newEntry]);
-            console.log(allEntry);   
+            console.log(allEntry); 
+            login({newEntry})  ;
         }
         return (
             <div className='body '>
@@ -21,19 +22,19 @@ import './form.css'
                     <div>
                    
                     <input type='text' placeholder='Username' id="name" name="uname" value={uname}
-                        onChange={(e)=> setName(e.target.value)}
+                        onChange={(e)=> setName(e.target.value)} required
                     />
                     </div>
                     <div>
                         <input type='password' placeholder='Password' id="pass" name="pass" value={pass}
-                            onChange={(e)=> setPass(e.target.value)}
+                            onChange={(e)=> setPass(e.target.value)} required
                         />
                     </div>
-                   
-				<input type="submit" value="Login"/>
-                    <p>
+                    <input type="submit" value="Login" className="submit-btn"/>
+				{/* <Link to="/Profile"><input type="submit" value="Login"/></Link> */}
+                    {/* <p>
                         If not registered  <Link to="/register" >Register here</Link>
-                    </p>
+                    </p> */}
                 </form>
             </div>
         )

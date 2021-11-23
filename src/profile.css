@@ -1,0 +1,76 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #141e30, #243b55);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    align-items: center;
+    width: 100%;
+    /* position: absolute; */
+}
+
+.profile-pic{
+    display: grid;
+    align-items: center;
+    justify-content:space-evenly;
+    padding-top: 10px;
+    font-family: 'Exo', sans-serif;
+	font-size: 16px;
+    margin:10px;
+}
+.image{
+   width: auto;
+   height: auto;
+   display: block;
+    align-items: center;
+}
+.detail-form{
+    display: grid;
+    border: 2px solid gray;
+}
+.form{
+    display: flex;
+    width: 80;
+    padding: 10px;
+    margin-top: 5px;
+}
+.form >input {
+    width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin: 10px;
+    background-color:#141e30 ;
+}
+.form input[type=submit]{
+	width: 260px;
+	height: 35px;
+	background: #fff;
+	border: 1px solid #fff;
+	cursor: pointer;
+	border-radius: 2px;
+	color: #a18d6c;
+	font-family: 'Exo', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 6px;
+	margin: 10px;
+}
+button{
+    cursor: pointer;
+    color: red;
+    background-color: honeydew;
+    width: 260px;
+    font-family: 'Exo', sans-serif;
+	font-size: 16px;
+    padding: 8px;
+    margin: 10px;
+}
